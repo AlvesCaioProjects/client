@@ -10,6 +10,6 @@ import java.util.UUID;
 public class AccountDTO {
 
     private UUID id;
-    private BigDecimal amount;
+    private BigDecimal balance;
     private Status status;
 }
