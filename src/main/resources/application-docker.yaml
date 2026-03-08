@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: client
+
+wallet:
+  service:
+    url: http://wallet_api:8080
