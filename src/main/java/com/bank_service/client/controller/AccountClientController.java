@@ -22,18 +22,18 @@ public class AccountClientController {
         return ResponseEntity.ok(accountClientService.getAccountById(id));
     }
 
-    @PatchMapping(value = "/{id}/deposit")
+    @PostMapping(value = "/{id}/deposit")
     private ResponseEntity<AccountDTO> deposit(@PathVariable UUID id, @RequestBody OperationDTO operation) {
         return ResponseEntity.ok(accountClientService.deposit(id, operation));
     }
 
-    @PatchMapping(value = "/{id}/withdraw")
+    @PostMapping(value = "/{id}/withdraw")
     public ResponseEntity<Object> withdraw(@PathVariable UUID id, @RequestBody OperationDTO operation) {
         Object response = accountClientService.withdraw(id, operation);
         return ResponseEntity.ok(response);
     }
 
-    @PatchMapping(value = "/transfer")
+    @PostMapping(value = "/transfer")
     public ResponseEntity<Object> transfer(@RequestBody TransferDTO transfer) {
         Object response = accountClientService
                 .transfer(transfer.getAccountSender(), transfer);
