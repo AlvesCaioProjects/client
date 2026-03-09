@@ -1,12 +1,12 @@
 services:
   client-api:
     build: .
-    container_name: client_api
+    container_name: client-api
     ports:
       - "8081:8080"
     environment:
       SPRING_PROFILES_ACTIVE: docker
-      WALLET_SERVICE_URL: http://wallet_api:8080
+      WALLET_SERVICE_URL: http://wallet-api:8080
     networks:
       - bank-service
 

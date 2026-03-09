@@ -4,4 +4,4 @@ spring:
 
 wallet:
   service:
-    url: http://wallet_api:8080
+    url: http://wallet-api:8080
